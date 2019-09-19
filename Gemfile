@@ -54,3 +54,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "dotenv-rails", "~> 2.7", :groups => [:development, :test]
+
+gem "foreman", "~> 0.63.0", :group => :development
