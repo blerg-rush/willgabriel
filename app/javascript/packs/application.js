@@ -18,3 +18,12 @@ require("channels")
 
 import '../stylesheets/application'
 import './bootstrap_custom.js'
+
+import { library, dom } from "@fortawesome/fontawesome-svg-core"
+import fas from "@fortawesome/free-solid-svg-icons"
+import far from '@fortawesome/fontawesome-free-regular'
+import fab from '@fortawesome/fontawesome-free-brands'
+
+library.add(fas, far, fab)
+
+dom.watch()
