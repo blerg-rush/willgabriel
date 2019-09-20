@@ -1,1 +1,16 @@
-@import './bootstrap_custom.scss'
+@import './bootstrap_custom.scss';
+@import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
+
+.navbar-dark {
+  border-bottom: 2px solid rgb(123, 201, 111);
+}
+
+.navbar-brand {
+  font-family: 'Inconsolata', monospace;
+  font-weight: bold;
+}
+
+.nav-link {
+  transition: .2s ease-in;
+  -webkit-transition: .2s ease-in;
+}
