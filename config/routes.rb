@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  get '/check.txt', to: proc {[200, {}, ['it_works']]}
   root 'static#index'
   get 'static/index'
   get 'static/about'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
