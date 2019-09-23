@@ -19,6 +19,10 @@ a.anchor {
   visibility: hidden;
 }
 
+img.w300 {
+  max-width:300px;
+}
+
 .navbar-dark {
   border-bottom: 2px solid map_get($theme-colors, 'bg-dark');
 }
