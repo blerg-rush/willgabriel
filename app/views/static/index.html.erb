@@ -1,2 +1,29 @@
-<h1>Static#index</h1>
-<p>Find me in app/views/static/index.html.erb</p>
+<% provide(:title, "Home") %>
+<div class="container-fluid bg-masthead px-5 py-5">
+  <div class="row">
+    <div class="col-12">
+      <%= image_tag 'static/photo', size: "200", class: "mx-auto my-5 d-block" %>
+    </div>
+    <div class="col-12 text-center">
+      <p class="code-text text-light" role="presentation">
+        &lt;div class=&quot;greeting&quot;&gt;
+      </p>
+      <h1 class="display-1 text-light mx-auto">
+        Hi, I'm Will!
+      </h1>
+      <h2 class="text-light mx-auto mb-4">
+        Ruby on Rails Developer
+      </h2>
+      <p class="code-text text-light" role="presentation">
+        &lt;/div&gt;
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container px-5 py-5">
+  <div class= "row">
+    <div class="col">
+      <p class="text-dark">This is some more text.</p>
+    </div>
+  </div>
+</div>

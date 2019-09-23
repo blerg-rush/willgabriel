@@ -1,8 +1,19 @@
 @import './bootstrap_custom.scss';
 @import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
 
+$theme-colors: (
+  "bg": whiteSmoke,
+  "bg-dark": mediumSeaGreen,
+  "text-light": whiteSmoke,
+  "text-dark": #343a40
+);
+
+body {
+  background-color: map_get($theme-colors, 'bg');
+}
+
 .navbar-dark {
-  border-bottom: 2px solid rgb(123, 201, 111);
+  border-bottom: 2px solid map_get($theme-colors, 'bg-dark');
 }
 
 .navbar-brand {
@@ -13,4 +24,21 @@
 .nav-link {
   transition: .2s ease-in;
   -webkit-transition: .2s ease-in;
+}
+
+.bg-masthead{
+  background-color: map_get($theme-colors, 'bg-dark');
+}
+
+.text-light {
+  color: map_get($theme-colors, 'text-light')
+}
+
+.text-dark {
+  color: map_get($theme-colors, 'text-dark')
+}
+
+.code-text {
+  font-family: 'Inconsolata', monospace;
+  font-weight: bold;
 }
