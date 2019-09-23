@@ -3,7 +3,7 @@
 
 $theme-colors: (
   "bg": whiteSmoke,
-  "bg-dark": mediumSeaGreen,
+  "bg-dark": rgb(60, 179, 143),
   "text-light": whiteSmoke,
   "text-dark": #343a40
 );
@@ -26,15 +26,15 @@ body {
   -webkit-transition: .2s ease-in;
 }
 
-.bg-masthead{
+.bg-dk{
   background-color: map_get($theme-colors, 'bg-dark');
 }
 
-.text-light {
+.text-lt {
   color: map_get($theme-colors, 'text-light')
 }
 
-.text-dark {
+.text-dk {
   color: map_get($theme-colors, 'text-dark')
 }
 
