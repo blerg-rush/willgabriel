@@ -1,3 +1,5 @@
+require "mailgun-ruby"
+
 class Message
   include ActiveModel::Model
   attr_accessor :name, :email, :phone_number, :body
