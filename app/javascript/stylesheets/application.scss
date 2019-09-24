@@ -8,6 +8,10 @@ $theme-colors: (
   "text-dark": #343a40
 );
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
   background-color: map_get($theme-colors, 'bg');
 }
