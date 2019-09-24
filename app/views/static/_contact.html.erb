@@ -1,6 +1,7 @@
 <div class="container text-dk px-5 py-5">
   <div class="row">
     <div class="col-12 text-center">
+      <%= render "shared/flash" %>
       <a class="anchor" id="contact"></a>
       <p class="code-text mb-2" role="presentation">
         &lt;div class=&quot;contact&quot;&gt;
@@ -11,7 +12,7 @@
       <p class="mb-4">
         You can send me an email using the form below:
       </p>
-      <%= form_with model: @message, url: messages_create_path, class: "mb-4", local: true do |f| %>
+      <%= form_with model: @message, url: messages_create_path, class: "mb-4" do |f| %>
         <div class="form-group">
           <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
         </div>
