@@ -56,6 +56,11 @@ img.w600 {
   border-radius: 5px;
 }
 
+ul.no-bullet {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 .navbar-dark {
   border-bottom: 2px solid map_get($theme-colors, 'bg-dark');
 }
