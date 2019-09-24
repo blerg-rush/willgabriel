@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root 'static#index'
   get 'static/index'
   get 'static/about'
+  get 'messages/new'
+  post 'messages/create'
   resources :posts
 end
