@@ -19,8 +19,24 @@ a.anchor {
   visibility: hidden;
 }
 
+a.link-light {
+  color: map_get($theme-colors, 'text-light');
+}
+
+img.light-rounded {
+  background-color: map-get($theme-colors, 'bg');
+  border-radius: 5px;
+  padding: 5px;
+}
+
 img.w300 {
-  max-width:300px;
+  max-width: 300px;
+  border-radius: 5px;
+}
+
+img.w600 {
+  max-width: 600px;
+  border-radius: 5px;
 }
 
 .navbar-dark {
