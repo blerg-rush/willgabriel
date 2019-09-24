@@ -1,5 +1,7 @@
 class StaticController < ApplicationController
-  def index; end
+  def index
+    @message = Message.new
+  end
 
   def about; end
 end
