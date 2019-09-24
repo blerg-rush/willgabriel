@@ -11,7 +11,7 @@
       <p class="mb-4">
         You can send me an email using the form below:
       </p>
-      <%= form_with scope: :message, class: "mb-4" do |f| %>
+      <%= form_with model: @message, url: messages_create_path, class: "mb-4", local: true do |f| %>
         <div class="form-group">
           <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
         </div>
@@ -35,16 +35,16 @@
         You can also find me in the following places:
         <ul class="no-bullet">
           <li>
+            <i class="fab fa-github"></i>
+            <a class="link-dark" href="https://github.com/TheWillGabriel">GitHub</a>
+          <li>
+          <li>
             <i class="fab fa-linkedin-in"></i>
             <a class="link-dark" href="https://www.linkedin.com/in/willgabriel/">LinkedIn</a>
           </li>
-          <li>
-            <i class="fab fa-github"></i>
-            <a class="link-dark" href="https://github.com/TheWillGabriel">GitHub</a>
           </li>
-          <li>
             <i class="fab fa-slack"></i>
-            <a class="link-dark" href="https://devedmonton-invite.herokuapp.com/">Dev Edmonton Society Slack group</a> (@Will Gabriel)
+            <a class="link-dark" href="https://devedmonton-invite.herokuapp.com/">Dev Edmonton Society Slack group</a>
           </li>
         </ul>
       </p>
