@@ -2,10 +2,13 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
 
 $theme-colors: (
-  "bg": whiteSmoke,
+  "bg": rgb(245,245,245),
   "bg-dark": rgb(60, 179, 143),
-  "text-light": whiteSmoke,
-  "text-dark": #343a40
+  "text-light": rgb(245,245,245),
+  "text-dark": #343a40,
+  "link-dark": rgb(78,161,136),
+  "hover-dark": rgb(61,127,107),
+  "hover-light": rgb(255,255,255)
 );
 
 html {
@@ -25,6 +28,16 @@ a.anchor {
 
 a.link-light {
   color: map_get($theme-colors, 'text-light');
+  &:hover{
+    color: map_get($theme-colors, 'hover-light');
+  }
+}
+
+a.link-dark {
+  color: map_get($theme-colors, 'link-dark');
+  &:hover{
+    color: map_get($theme-colors, 'hover-dark');
+  }
 }
 
 img.light-rounded {
