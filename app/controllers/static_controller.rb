@@ -6,8 +6,7 @@ class StaticController < ApplicationController
   def create
     @message = Message.new(message_params)
     respond_to do |format|
-      if @message.valid?
-        @message.send
+      if @message.send
         @message = Message.new
         format.html { redirect_to :index }
         format.js   { flash.now[:success] = "Message sent. Thank you!"}
