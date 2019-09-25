@@ -1,5 +1,10 @@
-// Test for ajax success
-console.log("This is the create.js.erb file");
-// Render flash message
-$('#contact-form').html("<%= j render 'contact_form' %>");
-$('#flash-message').html("<%= j render 'shared/flash' %>").delay(3000).fadeOut(4000);
+function refreshForm(innerHTML) {
+  const newForm = document.getElementById("contact-form");
+  newForm.innerHTML = innerHTML;
+}
+function renderFlash(innerHTML) {
+  const flashField = document.getElementById("flash-message");
+  flashField.innerHTML = innerHTML;
+}
+refreshForm("<%= j render 'contact_form' %>");
+renderFlash("<%= j render 'shared/flash' %>");
