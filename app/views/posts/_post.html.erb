@@ -14,7 +14,7 @@
 <% end %>
 <div class="mb-4 px-4 py-3 rounded flex-fill bg-lt shadow-sm text-dk">
   <% if !show_page? %>
-    <%= link_to(blog_path(post), class: "link-dark") do %>
+    <%= link_to(post, class: "link-dark") do %>
       <h2><%= post.title %></h2>
     <% end %>
     <small class="text-muted">    
@@ -27,7 +27,7 @@
       </p>
     </small>
     <p>
-      <%= link_to "View Post", blog_path(post), class: "btn btn-sm btn-outline-secondary" %>
+      <%= link_to "View Post", post, class: "btn btn-sm btn-outline-secondary" %>
     </p>
   <% end %>
 </div>
