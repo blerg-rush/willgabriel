@@ -1,6 +1,7 @@
 <% provide(:title, "Blog") %>
-<div class="container">
-  <h1>Blog Posts</h1>
+<a class="anchor" id="top"></a>
+<div class="container bg-dk text-lt px-5 py-4">
+  <h1 class="mb-4 text-center">Blog Posts</h1>
   <%= will_paginate %>
   <%= render @posts %>
   <%= will_paginate %>

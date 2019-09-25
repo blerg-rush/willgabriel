@@ -1,12 +1,33 @@
-<h1><%= post.title %></h1>
-<small class="text-muted">
-  Created: <%= post.created_at.to_formatted_s(:long) %> |
-  Updated: <%= post.updated_at.to_formatted_s(:long) %>
-</small>
-<p><%= markdown_text(post.content) %></p>
-<p>
+<% if show_page? %>
+  <h1><%= post.title %></h1>
   <small class="text-muted">
-    <%= link_to "Contact me", root_path(anchor: "contact") %>
-    if you have any comments!
+    Created: <%= post.created_at.to_formatted_s(:long) %> |
+    Updated: <%= post.updated_at.to_formatted_s(:long) %>
   </small>
-</p>
+  <p><%= markdown_text(post.content) %></p>
+  <p>
+    <small class="text-muted">
+      <%= link_to "Contact me", root_path(anchor: "contact") %>
+      if you have any comments!
+    </small>
+  </p>
+<% end %>
+<div class="mb-4 px-4 py-3 rounded flex-fill bg-lt shadow-sm text-dk">
+  <% if !show_page? %>
+    <%= link_to(blog_path(post), class: "link-dark") do %>
+      <h2><%= post.title %></h2>
+    <% end %>
+    <small class="text-muted">    
+      Created: <%= date(post.created_at) %> |
+      Updated: <%= date(post.updated_at) %>
+    </small>
+      <p>
+        <small class="text-muted">
+        <%= markdown_text(post.content.truncate(200)) %>
+      </p>
+    </small>
+    <p>
+      <%= link_to "View Post", blog_path(post), class: "btn btn-sm btn-outline-secondary" %>
+    </p>
+  <% end %>
+</div>

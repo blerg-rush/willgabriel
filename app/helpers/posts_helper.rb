@@ -6,4 +6,8 @@ module PostsHelper
                             fenced_code_blocks: true,
                             tables: true).render(text).html_safe
   end
+
+  def show_page?
+    !params[:id].nil?
+  end
 end

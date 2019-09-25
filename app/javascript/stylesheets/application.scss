@@ -85,6 +85,10 @@ ul.no-bullet {
   background-color: map_get($theme-colors, 'bg-dark');
 }
 
+.bg-lt{
+  background-color: map_get($theme-colors, 'bg');
+}
+
 .text-lt {
   color: map_get($theme-colors, 'text-light')
 }
