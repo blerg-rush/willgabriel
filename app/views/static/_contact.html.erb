@@ -1,9 +1,6 @@
 <div class="container text-dk px-5 py-5">
   <div class="row">
     <div class="col-12 text-center">
-      <div id="flash-message">
-        <%= render "shared/flash" %>
-      </div>
       <a class="anchor" id="contact"></a>
       <p class="code-text mb-2" role="presentation">
         &lt;div class=&quot;contact&quot;&gt;
@@ -11,12 +8,15 @@
       <h1 class="mb-4">
         Contact Me
       </h1>
-      <p class="mb-4">
-        You can send me an email using the form below:
-      </p>
+      <div id="flash-message">
+        <%= render "shared/flash" %>
+        <p class="mb-4">
+          You can send me an email using the form below:
+        </p>
+      </div>
       <div id="contact-form">
         <%= render "contact_form" %>
-      <div>
+      </div>
       <p>
         You can also find me in the following places:
         <ul class="no-bullet">
