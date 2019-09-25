@@ -1,6 +1,7 @@
 <% provide(title: "Edit Post") %>
+<div class="Container">
+  <h1>Edit Post</h1>
 
-<h1>Edit Post</h1>
-
-<%= render "form", post: @post %>
-<%= link_to "Show", @post %> | <%= "Back", posts_path %>
+  <%= render "form", post: @post %>
+  <%= link_to "Show", @post %> | <%= "Back", posts_path %>
+</div>
