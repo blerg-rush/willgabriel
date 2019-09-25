@@ -60,3 +60,9 @@ gem "foreman", "~> 0.63.0", :group => :development
 gem "simple_form", "~> 4.1"
 
 gem "mailgun-ruby"
+
+gem "redcarpet"
+
+gem "rouge"
+
+gem "will_paginate"
