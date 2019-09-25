@@ -46,6 +46,11 @@ a.link-dark {
   }
 }
 
+a.nostyle {
+  color: inherit;
+  text-decoration: none;
+}
+
 img.light-rounded {
   background-color: map-get($theme-colors, 'bg');
   border-radius: 5px;
