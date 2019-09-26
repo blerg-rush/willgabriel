@@ -1,11 +1,13 @@
 <% if show_page? %>
-  <h1><%= post.title %></h1>
-  <p class="text-lt mb-3">
-    <small>
-      Created: <%= post.created_at.to_formatted_s(:long) %> |
-      Updated: <%= post.updated_at.to_formatted_s(:long) %>
-    </small>
-  </p>
+  <div class="container">
+    <h1><%= post.title %></h1>
+    <p class="text-lt mb-3">
+      <small>
+        Created: <%= post.created_at.to_formatted_s(:long) %> |
+        Updated: <%= post.updated_at.to_formatted_s(:long) %>
+      </small>
+    </p>
+  </div>
 <% end %>
 <div class="container mb-4 px-4 py-3 rounded bg-lt shadow-sm text-dk">
   <% if !show_page? %>
