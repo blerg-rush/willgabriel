@@ -38,17 +38,17 @@ a.anchor {
   visibility: hidden;
 }
 
+a {
+  color: map_get($theme-colors, 'link-dark');
+  &:hover{
+    color: map_get($theme-colors, 'hover-dark');
+  }
+}
+
 a.link-light {
   color: map_get($theme-colors, 'text-light');
   &:hover{
     color: map_get($theme-colors, 'hover-light');
-  }
-}
-
-a.link-dark {
-  color: map_get($theme-colors, 'link-dark');
-  &:hover{
-    color: map_get($theme-colors, 'hover-dark');
   }
 }
 
