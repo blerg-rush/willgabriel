@@ -1,4 +1,5 @@
-class User < ActiveModel::Model
+class User
+  include ActiveModel::Model
   attr_accessor :username, :password
 
   def login_valid?
