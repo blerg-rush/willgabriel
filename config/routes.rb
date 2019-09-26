@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'static#index'
   resources :static, only: [:index, :new, :create]
   resources :posts
+  resources :sessions, only: [:new, :create, :destroy]
 end
