@@ -1,9 +1,7 @@
 <%= simple_form_for @post do |f| %>
-  <div class="row">
-    <div class="col-md-8">
+  <div class="container mb-4 px-4 py-3 rounded bg-lt shadow-sm text-dk">
       <%= f.input :title %>
       <%= f.input :content, input_html: { rows: 20 } %>
-      <%= f.submit "Save", class: "btn btn-lg btn-primary" %>
-    </div>
+      <%= f.submit "Save", class: "btn btn-primary" %>
   </div>
 <% end %>
