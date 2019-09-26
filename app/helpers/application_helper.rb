@@ -13,4 +13,8 @@ module ApplicationHelper
   def date(sequence)
     sequence.strftime("%F")
   end
+
+  def admin?
+    session[:current_user]
+  end
 end
