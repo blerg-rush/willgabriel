@@ -1,18 +1,13 @@
 <% if show_page? %>
   <h1><%= post.title %></h1>
-  <small class="text-muted">
-    Created: <%= post.created_at.to_formatted_s(:long) %> |
-    Updated: <%= post.updated_at.to_formatted_s(:long) %>
-  </small>
-  <p><%= markdown_text(post.content) %></p>
-  <p>
-    <small class="text-muted">
-      <%= link_to "Contact me", root_path(anchor: "contact") %>
-      if you have any comments!
+  <p class="text-lt mb-3">
+    <small>
+      Created: <%= post.created_at.to_formatted_s(:long) %> |
+      Updated: <%= post.updated_at.to_formatted_s(:long) %>
     </small>
   </p>
 <% end %>
-<div class="mb-4 px-4 py-3 rounded flex-fill bg-lt shadow-sm text-dk">
+<div class="container mb-4 px-4 py-3 rounded bg-lt shadow-sm text-dk">
   <% if !show_page? %>
     <%= link_to(post, class: "link-dark") do %>
       <h2><%= post.title %></h2>
@@ -28,6 +23,15 @@
     </small>
     <p>
       <%= link_to "View Post", post, class: "btn btn-sm btn-outline-secondary" %>
+    </p>
+  <% end %>
+  <% if show_page? %>
+    <p><%= markdown_text(post.content) %></p>
+    <p>
+      <small class="text-muted">
+        <%= link_to "Contact me", root_path(anchor: "contact") %>
+        if you have any comments!
+      </small>
     </p>
   <% end %>
 </div>
