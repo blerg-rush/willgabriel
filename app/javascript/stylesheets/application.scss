@@ -76,6 +76,12 @@ img.light-rounded {
   padding: 5px;
 }
 
+@include media-breakpoint-down(xs) {
+  img.light-rounded {
+    max-width: 90vw;
+  }
+}
+
 img.w-300 {
   max-width: 300px;
   border-radius: 5px;
