@@ -25,6 +25,9 @@
     </small>
     <p>
       <%= link_to "View Post", post, class: "btn btn-sm btn-outline-secondary" %>
+      <% if admin? %>
+        <%= link_to "Edit Post", edit_post_path(post.id), class: "btn btn-sm btn-outline-info" %>
+      <% end %>
     </p>
   <% end %>
   <% if show_page? %>
