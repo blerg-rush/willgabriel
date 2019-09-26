@@ -10,7 +10,7 @@
   </div>
 <% end %>
 <div class="container mb-4 px-4 py-3 rounded bg-lt shadow-sm text-dk">
-  <% if !show_page? %>
+  <% unless show_page? %>
     <%= link_to(post, class: "link-dark") do %>
       <h2><%= post.title %></h2>
     <% end %>
@@ -38,11 +38,12 @@
         if you have any comments!
       </small>
     </p>
-    <% if admin? %>
-      <p>
+    <p>
+      <%= link_to "Back to Posts", posts_path, class: "btn btn-sm btn-outline-secondary" %>
+      <% if admin? %>
         <%= link_to "Edit Post", edit_post_path(post.id), class: "btn btn-sm btn-outline-info" %>
         <%= link_to "Delete Post",  post_path(post.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-outline-danger" %>
-      </p>
-    <% end %>
+      <% end %>
+    </p>
   <% end %>
 </div>
