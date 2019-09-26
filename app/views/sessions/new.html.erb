@@ -1,9 +1,8 @@
 <% provide(:title, "Log In") %>
-
-<div class="container-flex bg-dk text-lt extend">
+<div class="container-flex bg-dk text-lt extend py-5">
   <div class="container">
     <h1>Admin Login</h1>
-    <%= form_with model: @user, url: sessions_path, remote: false do |f| %>
+    <%= form_with model: @user, url: sessions_path, local: true do |f| %>
       <div class="form-group">
         <%= f.label :username %>
         <%= f.text_field :username, class: "form-control" %>
