@@ -1,5 +1,7 @@
 @import './bootstrap_custom.scss';
+@import './rouge.css.erb';
 @import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
+@import url("https://code.cdn.mozilla.net/fonts/fira.css?family=fira-mono");
 
 $theme-colors: (
   "bg": rgb(245,245,245),
@@ -23,6 +25,10 @@ html {
 
 body {
   background-color: map_get($theme-colors, 'bg');
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 40px;
 }
 
 a.anchor {
@@ -51,6 +57,19 @@ a.nostyle {
   text-decoration: none;
 }
 
+code,
+pre {
+  font-family: 'fira-mono', monospace;
+}
+
+pre.highlight {
+  padding: 10px;
+}
+
+.highlight {
+  border-radius: 5px;
+}
+
 img.light-rounded {
   background-color: map-get($theme-colors, 'bg');
   border-radius: 5px;
@@ -70,6 +89,17 @@ img.w600 {
 ul.no-bullet {
   list-style-type: none;
   padding-left: 0;
+}
+
+.extend {
+  min-height: 89.4vh;
+}
+
+.footer {
+  min-width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
 }
 
 .navbar-dark {
