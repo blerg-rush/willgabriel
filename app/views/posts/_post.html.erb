@@ -38,5 +38,11 @@
         if you have any comments!
       </small>
     </p>
+    <% if admin? %>
+      <p>
+        <%= link_to "Edit Post", edit_post_path(post.id), class: "btn btn-sm btn-outline-info" %>
+        <%= link_to "Delete Post",  post_path(post.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-outline-danger" %>
+      </p>
+    <% end %>
   <% end %>
 </div>
