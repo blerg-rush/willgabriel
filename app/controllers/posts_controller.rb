@@ -14,7 +14,9 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  def edit; end
+  def edit
+    @post = Post.find(params[:id])
+  end
 
   def create
     @post = Post.new(post_params)
@@ -28,6 +30,7 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post = Post.find(params[:id])
     if @post.update(post_params)
       flash[:success] = "Post updated"
       redirect_to @post
