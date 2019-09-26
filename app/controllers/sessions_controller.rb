@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       redirect_to root_path
     else
       @user.password = nil
-      flash[:danger] = "Sorry, administrators only"
+      flash.now[:danger] = "Sorry, administrators only"
       render :new
     end
   end
