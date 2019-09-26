@@ -11,7 +11,7 @@
 <% end %>
 <div class="container mb-4 px-4 py-3 rounded bg-lt shadow-sm text-dk">
   <% unless show_page? %>
-    <%= link_to(post, class: "link-dark") do %>
+    <%= link_to(post) do %>
       <h2><%= post.title %></h2>
     <% end %>
     <small class="text-muted">    
