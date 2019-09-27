@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :authentication_required!, except: :show
+
   def new
     @project = Project.new
   end
