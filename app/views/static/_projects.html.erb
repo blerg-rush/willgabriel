@@ -21,6 +21,10 @@
       <p>
         I like to keep it pretty green.
       </p>
+      <h4>Selected Projects</h4>
+      <div class="d-flex flex-wrap justify-content-center mb-4">
+        <%= render(partial: "projects/card", collection: @projects, as: :project) || "None added yet!" %>
+      </div>
       <p class="code-text" role="presentation">
         &lt;/div&gt;
       </p>
