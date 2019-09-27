@@ -1,2 +1,10 @@
-<h1>Projects#edit</h1>
-<p>Find me in app/views/projects/edit.html.erb</p>
+<% provide(title: "Edit Project") %>
+<div class="container-fluid bg-dk text-lt px-2 py-4">
+  <div class="container px-0">
+    <h1>Edit Project</h1>
+
+    <%= render "form", project: @project %>
+    <%= link_to "Show", @project, class: "link-light" %> |
+    <%= link_to "Back", root_path(anchor: "projects"), class: "link-light" %>
+  </div>
+</div>
