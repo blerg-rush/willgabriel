@@ -1,0 +1,11 @@
+<%= simple_form_for(@project) do |f| %>
+  <div class="container mb-4 px-4 py-3 rounded bg-lt shadow-sm text-dk">
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :url %>
+    <%= f.input :source %>
+    <%= f.input :image %>
+    <%= f.text :more, input_html: { rows: 10 } %>
+    <%= f.button :submit %>
+  </div>
+<% end %>
