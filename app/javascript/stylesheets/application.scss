@@ -175,6 +175,22 @@ ul.no-bullet {
   transform: translate(-50%, -50%);
 }
 
+.project-card {
+  max-width: 300px;
+}
+
+@include media-breakpoint-down(sm) {
+  .project-card {
+    max-width: 60vw;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .project-card {
+    max-width: 90vw;
+  }
+}
+
 .bg-dk{
   background-color: map_get($theme-colors, 'bg-dark');
 }
