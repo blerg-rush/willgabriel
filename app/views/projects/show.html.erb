@@ -1,2 +1,15 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<% provide(:title, "Projects") %>
+<a class="anchor" id="top"></a>
+<div class="container-fluid bg-dk px-2 text-lt py-4 extend">
+  <div class="text-center">
+    <p class="code-text mb-2" role="presentation">
+      &lt;div class=&quot;projects&quot;&gt;
+    </p>
+  </div>
+  <%= render @project %>
+  <div class="text-center align-self-end">
+    <p class="code-text" role="presentation">
+          &lt;/div&gt;
+    </p>
+  </div>
+</div>
