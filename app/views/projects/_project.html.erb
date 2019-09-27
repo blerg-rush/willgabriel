@@ -1,0 +1,20 @@
+<div class="container">
+  <h1><%= project.title %></h1>
+</div>
+<div class="container mb-4 px-4 py-3 rounded bg-lt shadow-sm text-dk">
+  <p><em><%= project.description %></em></p>
+  <p><%= markdown_text(project.more) %>
+  <div class="d-flex justify-content-center">
+    <%= image_tag "projects/#{project.image}", class="img-fluid w-300" %>
+    <% unless project.url.nil? %>
+      <%= link_to "Website", project.url, class: "btn btn-outline-primary" %>
+    <% end %>
+    <% unless project.source.nil? %>
+      <%= link_to "GitHub", project.source, class: "btn btn-outline-success" %>
+    <% end %>
+  </div>
+</div>
+<% if admin? %>
+  <%= link_to "Edit Project", edit_project_path(project.id), class: "btn btn-sm btn-outline-info" %>
+  <%= link_to "Delete Project",  project_path(project.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-outline-danger" %>
+<% end %>
