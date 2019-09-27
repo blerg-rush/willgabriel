@@ -10,10 +10,10 @@
       <% end %>
     </div>
     <div class="card-footer d-flex justify-content-around">
-      <% unless project.url.nil? %>
+      <% unless project.url == "#" %>
         <%= link_to "Website", project.url, class: "btn btn-outline-primary" %>
       <% end %>
-      <% unless project.source.nil? %>
+      <% unless project.source == "#" %>
         <%= link_to "GitHub", project.source, class: "btn btn-outline-success" %>
       <% end %>
     </div>
