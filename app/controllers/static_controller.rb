@@ -1,6 +1,7 @@
 class StaticController < ApplicationController
   def index
     @message = Message.new
+    @projects = Project.all
   end
 
   def create
