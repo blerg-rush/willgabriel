@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new'
   get 'logout', to: 'sessions#destroy'
   get 'sessions', to: 'sessions#new'
-  resources :static, only: [:index, :new, :create]
   resources :posts
+  resources :projects, only: [:new, :show, :create, :edit, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
+  resources :static, only: [:index, :new, :create]
 end
