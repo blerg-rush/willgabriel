@@ -1,0 +1,30 @@
+<div class="card shadow-sm project-card">
+    <%= link_to(project) do %>
+      <%= image_tag "projects/#{project.image}", class: "card-img-top w-100" %>
+    <% end %>
+    <div class="card-body project-card-body">
+      <h5 class="card-title"><%= project.title %></h5>
+      <p class="card-text text-muted"><%= project.description %></p>
+      <% unless project.more.nil? %>
+        <small><%= link_to 'More details', project %></small>
+      <% end %>
+    </div>
+    <div class="card-footer d-flex justify-content-around">
+      <% unless project.url.nil? %>
+        <%= link_to "Website", project.url, class: "btn btn-outline-primary" %>
+      <% end %>
+      <% unless project.source.nil? %>
+        <%= link_to "GitHub", project.source, class: "btn btn-outline-success" %>
+      <% end %>
+    </div>
+    <% if admin? %>
+      <div class="card-footer d-flex justify-content-around p-1">
+        <small>
+          <%= link_to "Edit", edit_project_path(project.id) %>
+        </small>
+        <small>
+          <%= link_to "Delete", project_path(project.id), method: :delete, data: { confirm: "Are you sure?" } %>
+        </small>
+      </div>
+    <% end %>
+  </div>
