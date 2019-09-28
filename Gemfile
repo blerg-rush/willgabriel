@@ -66,3 +66,5 @@ gem "redcarpet"
 gem "rouge"
 
 gem "will_paginate"
+
+gem "acts_as_list"
