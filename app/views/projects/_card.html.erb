@@ -1,6 +1,6 @@
 <div class="card shadow-sm project-card mx-md-3 my-3">
     <%= link_to project do %>
-      <%= image_tag "projects/#{project.image}", class: "card-img-top img-fluid shadow-sm" %>
+      <%= image_tag "projects/#{project.image}", class: "card-img-top img-fluid shadow-sm", alt: "#{project.title}" %>
     <% end %>
     <div class="card-body project-card-body">
       <h5 class="card-title text-dark"><%= project.title %></h5>
