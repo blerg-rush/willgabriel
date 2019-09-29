@@ -14,14 +14,14 @@
     <%= link_to(post) do %>
       <h2><%= post.title %></h2>
     <% end %>
-    <small class="text-muted">    
-      Created: <%= date(post.created_at) %> |
-      Updated: <%= date(post.updated_at) %>
-    </small>
-      <p>
-        <small class="text-muted">
-        <%= markdown_text(post.content.truncate(200)) %>
-      </p>
+    <p>
+      <small class="text-muted">    
+        Created: <%= date(post.created_at) %> |
+        Updated: <%= date(post.updated_at) %>
+      </small>
+    </p>
+    <small>
+      <%= markdown_text(post.content.truncate(200)) %>
     </small>
     <p>
       <%= link_to "View Post", post, class: "btn btn-sm btn-outline-secondary" %>
@@ -31,7 +31,7 @@
     </p>
   <% end %>
   <% if show_page? %>
-    <p><%= markdown_text(post.content) %></p>
+    <%= markdown_text(post.content) %>
     <p>
       <small class="text-muted">
         <%= link_to "Contact me", root_path(anchor: "contact") %>
