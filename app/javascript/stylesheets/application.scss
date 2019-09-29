@@ -82,28 +82,28 @@ img.light-rounded {
   }
 }
 
-img.w-300 {
+img.w300 {
   max-width: 300px;
   border-radius: 5px;
 }
 
-img.w-600 {
+img.w600 {
   max-width: 600px;
   border-radius: 5px;
 }
 
 @include media-breakpoint-down(sm) {
-  img.w-300 {
+  img.w300 {
     max-width: 356px;
   }
 
-  img.w-600 {
+  img.w600 {
     max-width: 500px;
   }
 }
 
 @include media-breakpoint-down(xs) {
-  img.w-600 {
+  img.w600 {
     max-width: 90vw;
   }
 }

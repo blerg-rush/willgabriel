@@ -1,11 +1,9 @@
 <% if show_page? %>
   <div class="container">
     <h1><%= post.title %></h1>
-    <p class="text-lt mb-3">
-      <small>
-        Created: <%= post.created_at.to_formatted_s(:long) %> |
-        Updated: <%= post.updated_at.to_formatted_s(:long) %>
-      </small>
+    <p class="small text-lt mb-3">
+      Created: <%= post.created_at.to_formatted_s(:long) %> |
+      Updated: <%= post.updated_at.to_formatted_s(:long) %>
     </p>
   </div>
 <% end %>
@@ -14,15 +12,13 @@
     <%= link_to(post) do %>
       <h2><%= post.title %></h2>
     <% end %>
-    <p>
-      <small class="text-muted">    
-        Created: <%= date(post.created_at) %> |
-        Updated: <%= date(post.updated_at) %>
-      </small>
+    <p class="small text-muted">   
+      Created: <%= date(post.created_at) %> |
+      Updated: <%= date(post.updated_at) %>
     </p>
-    <small>
+    <div class="small">
       <%= markdown_text(post.content.truncate(200)) %>
-    </small>
+    </div>
     <p>
       <%= link_to "View Post", post, class: "btn btn-sm btn-outline-secondary" %>
       <% if admin? %>
@@ -32,17 +28,16 @@
   <% end %>
   <% if show_page? %>
     <%= markdown_text(post.content) %>
-    <p>
-      <small class="text-muted">
-        <%= link_to "Contact me", root_path(anchor: "contact") %>
-        if you have any comments!
-      </small>
+    <p class="small text-muted">
+      <%= link_to "Contact me", root_path(anchor: "contact") %>
+      if you have any comments!
     </p>
     <p>
       <%= link_to "Back to Posts", posts_path, class: "btn btn-sm btn-outline-secondary" %>
       <% if admin? %>
         <%= link_to "Edit Post", edit_post_path(post.id), class: "btn btn-sm btn-outline-info" %>
-        <%= link_to "Delete Post",  post_path(post.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-outline-danger" %>
+        <%= link_to "Delete Post",  post_path(post.id), method: :delete, data: { confirm: "Are you sure?" },
+                                                        class: "btn btn-sm btn-outline-danger" %>
       <% end %>
     </p>
   <% end %>

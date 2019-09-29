@@ -1,30 +1,31 @@
 <div class="card shadow-sm project-card mx-md-3 my-3">
-    <%= link_to project do %>
-      <%= image_tag "projects/#{project.image}", class: "card-img-top img-fluid shadow-sm", alt: "#{project.title}" %>
-    <% end %>
-    <div class="card-body project-card-body">
-      <h5 class="card-title text-dark"><%= project.title %></h5>
-      <p class="card-text text-muted"><%= project.description %></p>
-      <% unless project.more.nil? %>
-        <small><%= link_to 'More details', project %></small>
-      <% end %>
-    </div>
-    <div class="card-footer d-flex justify-content-around">
-      <% unless project.url == "#" %>
-        <%= link_to "Website", project.url, target: "_blank", class: "btn btn-outline-primary" %>
-      <% end %>
-      <% unless project.source == "#" %>
-        <%= link_to "GitHub", project.source, target: "_blank", class: "btn btn-outline-success" %>
-      <% end %>
-    </div>
-    <% if admin? %>
-      <div class="card-footer d-flex justify-content-around p-1">
-        <small>
-          <%= link_to "Edit", edit_project_path(project.id) %>
-        </small>
-        <small>
-          <%= link_to "Delete", project, method: :delete, data: { confirm: "Are you sure?" } %>
-        </small>
-      </div>
+  <%= link_to project do %>
+    <%= image_tag "projects/#{project.image}", class: "card-img-top img-fluid shadow-sm", 
+                                                alt: "#{project.title}" %>
+  <% end %>
+  <div class="card-body project-card-body">
+    <h5 class="card-title text-dark"><%= project.title %></h5>
+    <p class="card-text text-muted"><%= project.description %></p>
+    <% unless project.more.nil? %>
+      <small><%= link_to 'More details', project %></small>
     <% end %>
   </div>
+  <div class="card-footer d-flex justify-content-around">
+    <% unless project.url == "#" %>
+      <%= link_to "Website", project.url, target: "_blank", class: "btn btn-outline-primary" %>
+    <% end %>
+    <% unless project.source == "#" %>
+      <%= link_to "GitHub", project.source, target: "_blank", class: "btn btn-outline-success" %>
+    <% end %>
+  </div>
+  <% if admin? %>
+    <div class="card-footer d-flex justify-content-around p-1">
+      <small>
+        <%= link_to "Edit", edit_project_path(project.id) %>
+      </small>
+      <small>
+        <%= link_to "Delete", project, method: :delete, data: { confirm: "Are you sure?" } %>
+      </small>
+    </div>
+  <% end %>
+</div>
