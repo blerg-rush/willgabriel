@@ -57,7 +57,7 @@ gem "dotenv-rails", "~> 2.7", :groups => [:development, :test]
 
 gem "foreman", "~> 0.63.0", :group => :development
 
-gem "simple_form", "~> 4.1"
+gem "simple_form"
 
 gem "mailgun-ruby"
 
