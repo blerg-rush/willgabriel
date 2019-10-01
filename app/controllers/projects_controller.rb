@@ -17,15 +17,15 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
   end
 
   def edit
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
   end
 
   def update
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
     if @project.update(project_params)
       flash[:success] = "Project updated"
       redirect_to @project
@@ -36,7 +36,7 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
     @prohect.destroy
     flash[:info] = "Project deleted"
     redirect_to root_path(anchor: "projects")
