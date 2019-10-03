@@ -9,6 +9,9 @@ class Message
 
   def send
     mg_client = Mailgun::Client.new ENV["MAILGUN_SECRET_API_KEY"]
+
+    mg_client.enable_test_mode! if Rails.env.test?
+
     info = {
       from: email,
       to: "will.gabriel@gmail.com",
