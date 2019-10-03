@@ -1,0 +1,7 @@
+one:
+  title: 'Test Project'
+  description: 'This is a test project'
+  image: 'website.png'
+  more: 'This is an extended description of nothing'
+  position: 1
+  slug: 'test-project'
