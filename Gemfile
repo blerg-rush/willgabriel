@@ -70,3 +70,5 @@ gem "will_paginate"
 gem "acts_as_list"
 
 gem "friendly_id"
+
+gem 'devise'
