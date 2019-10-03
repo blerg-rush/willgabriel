@@ -24,7 +24,7 @@ class NavigationTest < ApplicationSystemTestCase
     assert_content 'div class="greeting"'
     click_link 'Projects'
     sleep 1
-    click_link 'More details'
+    click_on 'Test Project'
     assert_content 'div class="projects"'
     click_link 'Blog'
     assert_content 'div class="blog"'
