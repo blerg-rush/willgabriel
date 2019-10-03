@@ -6,13 +6,13 @@
     <% end %>
   </div>
   <div class="d-flex text-lt">
-    <% if admin? %>
-      <%= link_to(logout_path, class: "nostyle") do %>
+    <% if admin_signed_in? %>
+      <%= link_to(destroy_admin_session_path, method: :delete, class: "nostyle") do %>
         <i class="fas fa-sign-out-alt mr-1"></i>
         <small> Log Out</small>
         <% end %>
     <% else %>
-      <%= link_to(login_path, class: "nostyle") do %>
+      <%= link_to(new_admin_session_path, class: "nostyle") do %>
         <i class="fas fa-lock mr-1"></i>
         <small> Admin Login</small>
       <% end %>
