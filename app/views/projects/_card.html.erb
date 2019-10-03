@@ -18,7 +18,7 @@
       <%= link_to "GitHub", project.source, target: "_blank", class: "btn btn-outline-success" %>
     <% end %>
   </div>
-  <% if admin? %>
+  <% if admin_signed_in? %>
     <div class="card-footer d-flex justify-content-around p-1">
       <small>
         <%= link_to "Edit", edit_project_path(project.id) %>

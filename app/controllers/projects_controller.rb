@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :authentication_required!, except: :show
+  before_action :authenticate_admin!, except: :show
 
   def new
     @project = Project.new

@@ -1,7 +1,7 @@
 require "will_paginate/array"
 
 class PostsController < ApplicationController
-  before_action :authentication_required!, except: [:index, :show]
+  before_action :authenticate_admin!, except: [:index, :show]
 
   def index
     @posts = Post.all.order(created_at: :desc)

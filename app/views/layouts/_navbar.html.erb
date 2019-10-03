@@ -22,7 +22,7 @@
       <li class="nav-item active">
         <%= link_to "Blog", posts_path , class: "nav-link" %>
       </li>
-      <% if admin? %>
+      <% if admin_signed_in? %>
       <li class="nav-item">
         <%= link_to "New Post", new_post_path, class: "nav-link" %>
       </li>
