@@ -253,7 +253,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
-  dotenv-rails (~> 2.7)
+  dotenv-rails
   foreman
   friendly_id
   jbuilder (~> 2.7)
