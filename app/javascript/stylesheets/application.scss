@@ -107,9 +107,10 @@ img.w600 {
     max-width: 90vw;
   }
 }
-
-.blog-post {
-  max-width: 960px;
+@include media-breakpoint-up(lg) {
+  .blog-post {
+    max-width: 960px;
+  }
 }
 
 ul.no-bullet {
