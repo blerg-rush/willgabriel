@@ -1,5 +1,5 @@
 <% if show_page? %>
-  <div class="container">
+  <div class="container blog-post">
     <h1><%= post.title %></h1>
     <p class="small text-lt mb-3">
       Created: <%= post.created_at.to_formatted_s(:long) %> |
@@ -7,7 +7,7 @@
     </p>
   </div>
 <% end %>
-<div class="container mb-4 px-4 py-3 rounded bg-lt shadow-sm text-dk">
+<div class="container blog-post mb-4 px-4 py-3 rounded bg-lt shadow-sm text-dk">
   <% unless show_page? %>
     <%= link_to(post) do %>
       <h2><%= post.title %></h2>
