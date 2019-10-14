@@ -7,9 +7,10 @@
     </p>
   </div>
   <h1 class="mb-4 text-center">Recent Posts</h1>
-  <%= will_paginate %>
   <%= render @posts %>
-  <%= will_paginate %>
+  <div class="container blog-post px-0">
+    <%= will_paginate @posts, renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer, previous_label: "«" , next_label: "»" %>
+  </div>
   <div class="text-center align-self-end">
     <p class="code-text" role="presentation">
           &lt;/div&gt;

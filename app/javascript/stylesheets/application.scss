@@ -180,6 +180,26 @@ ul.no-bullet {
   transform: translate(-50%, -50%);
 }
 
+.pagination li a
+{
+    background-color: map_get($theme-colors, 'bg');
+    color: map_get($theme-colors, 'hover-dark');
+}
+
+.page-item.active .page-link
+{
+    color: map_get($theme-colors, 'bg');
+    background-color: map_get($theme-colors, 'hover-dark') !important;
+    border: solid 1px map_get($theme-colors, 'hover-dark') !important;
+}
+
+.page-item.active .page-link a:hover
+{
+    color: map_get($theme-colors, 'hover-dark');
+    background-color: map_get($theme-colors, 'hover-dark') !important;
+    border: solid 1px map_get($theme-colors, 'hover-dark');
+}
+
 .project-card {
   max-width: 300px;
 }
