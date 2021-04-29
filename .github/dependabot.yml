@@ -1,0 +1,103 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "12:00"
+  open-pull-requests-limit: 10
+  target-branch: develop
+  reviewers:
+  - TheWillGabriel
+  ignore:
+  - dependency-name: bootsnap
+    versions:
+    - 1.6.0
+    - 1.7.0
+    - 1.7.1
+    - 1.7.2
+    - 1.7.3
+  - dependency-name: nokogiri
+    versions:
+    - 1.11.1
+    - 1.11.2
+  - dependency-name: capybara
+    versions:
+    - 3.35.1
+  - dependency-name: webdrivers
+    versions:
+    - 4.5.0
+  - dependency-name: simple_form
+    versions:
+    - 5.0.3
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "12:00"
+  open-pull-requests-limit: 10
+  target-branch: develop
+  reviewers:
+  - TheWillGabriel
+  ignore:
+  - dependency-name: webpack
+    versions:
+    - 5.19.0
+    - 5.20.0
+    - 5.20.1
+    - 5.20.2
+    - 5.21.0
+    - 5.21.1
+    - 5.21.2
+    - 5.22.0
+    - 5.23.0
+    - 5.24.0
+    - 5.24.1
+    - 5.24.2
+    - 5.24.3
+    - 5.24.4
+    - 5.25.0
+    - 5.25.1
+    - 5.26.0
+    - 5.26.1
+    - 5.26.2
+    - 5.26.3
+    - 5.27.0
+    - 5.27.1
+    - 5.27.2
+    - 5.28.0
+    - 5.29.0
+    - 5.30.0
+    - 5.31.0
+    - 5.31.1
+    - 5.31.2
+    - 5.32.0
+    - 5.33.2
+    - 5.34.0
+    - 5.35.0
+    - 5.35.1
+    - 5.36.0
+  - dependency-name: "@fortawesome/free-regular-svg-icons"
+    versions:
+    - 5.15.2
+  - dependency-name: "@fortawesome/fontawesome-svg-core"
+    versions:
+    - 1.2.34
+  - dependency-name: "@fortawesome/free-solid-svg-icons"
+    versions:
+    - 5.15.2
+  - dependency-name: "@fortawesome/free-brands-svg-icons"
+    versions:
+    - 5.15.2
+  - dependency-name: "@fortawesome/fontawesome-free"
+    versions:
+    - 5.15.2
+  - dependency-name: "@rails/webpacker"
+    versions:
+    - 5.2.1
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
